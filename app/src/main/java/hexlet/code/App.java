@@ -1,8 +1,7 @@
 package hexlet.code;
-import java.util.Scanner;
 
 public class App {
     public static void main(String[] args) {
-        Cli.Welcome();
+        Cli.welcome();
     }
 }
