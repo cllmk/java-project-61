@@ -1,6 +1,7 @@
 plugins {
     id 'java'
     id 'application'
+    id 'checkstyle'
 }
 
 group = 'hexlet.code'
@@ -11,7 +12,7 @@ application {
 }
 
 compileJava {
-   options.release = 20
+    options.release.set(20)
 }
 
 run {
