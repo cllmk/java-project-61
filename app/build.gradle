@@ -11,7 +11,11 @@ application {
 }
 
 compileJava {
-    options.release = 20.0.2
+   options.release = 20
+}
+
+run {
+    standardInput = System.in
 }
 repositories {
     mavenCentral()
