@@ -1,7 +1,5 @@
 package hexlet.code;
-import hexlet.code.games.Calc;
-import hexlet.code.games.Even;
-import hexlet.code.games.GCD;
+import hexlet.code.games.*;
 
 import java.util.Scanner;
 
@@ -12,6 +10,8 @@ public class App {
                            "2 - Even\n" +
                            "3 - Calc\n" +
                            "4 - GCD\n" +
+                           "5 - Progression\n" +
+                           "6 - Prime\n" +
                            "0 - Exit\n");
         System.out.print("Your choice: ");
         Scanner choiceGame = new Scanner(System.in);
@@ -28,6 +28,12 @@ public class App {
                 break;
             case 4:
                 GCD.runGame();
+                break;
+            case 5:
+                Progression.runGame();
+                break;
+            case 6:
+                Prime.runGame();
                 break;
             case 0:
                 break;
