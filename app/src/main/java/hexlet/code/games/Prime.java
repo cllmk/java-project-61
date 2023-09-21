@@ -2,12 +2,10 @@ package hexlet.code.games;
 
 import hexlet.code.Engine;
 
-import java.util.Arrays;
-
 import static hexlet.code.Engine.COUNT_ROUNDS;
 
 public class Prime {
-    private static String RULES_GAME = "Answer 'yes' if given number is prime. Otherwise answer 'no'.";
+    private static final String RULES_GAME = "Answer 'yes' if given number is prime. Otherwise answer 'no'.";
     private static final int MIN_NUMBER = 1;
     private static final int MAX_NUMBER = 1000;
 

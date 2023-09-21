@@ -1,9 +1,20 @@
 package hexlet.code;
-import hexlet.code.games.*;
+import hexlet.code.games.Even;
+import hexlet.code.games.Prime;
+import hexlet.code.games.Calc;
+import hexlet.code.games.GCD;
+import hexlet.code.games.Progression;
 
 import java.util.Scanner;
 
 public class App {
+    private static final int GREET_USER  = 1;
+    private static final int EVEN_GAME = 2;
+    private static final int CALC_GAME = 3;
+    private static final int GCD_GAME = 4;
+    private static final int PROGRESSION_GAME = 5;
+    private static final int PRIME_GAME = 6;
+    private static final int EXIT = 0;
     public static void main(String[] args) {
         System.out.println("Please enter the game number and press Enter.");
         System.out.println("1 - Greet");
@@ -17,25 +28,25 @@ public class App {
         Scanner choiceGame = new Scanner(System.in);
         int numberOfGame = choiceGame.nextInt();
         switch (numberOfGame) {
-            case 1:
+            case GREET_USER:
                 Cli.welcome();
                 break;
-            case 2:
+            case EVEN_GAME:
                 Even.runGame();
                 break;
-            case 3:
+            case CALC_GAME:
                 Calc.runGame();
                 break;
-            case 4:
+            case GCD_GAME:
                 GCD.runGame();
                 break;
-            case 5:
+            case PROGRESSION_GAME:
                 Progression.runGame();
                 break;
-            case 6:
+            case PRIME_GAME:
                 Prime.runGame();
                 break;
-            case 0:
+            case EXIT:
                 break;
             default: System.out.println("Operation selection error.");
         }

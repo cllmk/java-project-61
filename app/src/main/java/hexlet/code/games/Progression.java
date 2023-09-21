@@ -7,13 +7,15 @@ import java.util.Arrays;
 import static hexlet.code.Engine.COUNT_ROUNDS;
 
 public class Progression {
-    private static String RULES_GAME = "What number is missing in the progression?";
+    private static final String RULES_GAME = "What number is missing in the progression?";
     private static final int MIN_NUMBER = 1;
     private static final int MAX_NUMBER = 100;
-    private static String[][] generateExpressionsAndRightAnswers(){
+    private static final int MIN_LENGTH_PROGRESSION= 5;
+    private static final int MAX_LENGTH_PROGRESSION = 10;
+    private static String[][] generateExpressionsAndRightAnswers() {
         String[][] expressionsAndAnswer = new String[COUNT_ROUNDS][2];
         for (int i = 0; i < COUNT_ROUNDS; i++) {
-            int lengthProgression = Engine.getRandomNumber(5, 11);
+            int lengthProgression = Engine.getRandomNumber(MIN_LENGTH_PROGRESSION, MAX_LENGTH_PROGRESSION);
             int indexOfHiddenElement = Engine.getRandomNumber(0, lengthProgression - 1);
             String hiddenElement = null;
             String[] progression = new String[lengthProgression];

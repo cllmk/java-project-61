@@ -5,7 +5,7 @@ import hexlet.code.Engine;
 import static hexlet.code.Engine.COUNT_ROUNDS;
 
 public class GCD {
-    private static String RULES_GAME = "Find the greatest common divisor of given numbers.";
+    private static final String RULES_GAME = "Find the greatest common divisor of given numbers.";
     private static final int MIN_NUMBER = 1;
     private static final int MAX_NUMBER = 100;
     private static String[][] generateExpressionsAndRightAnswers() {

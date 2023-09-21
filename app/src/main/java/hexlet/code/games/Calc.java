@@ -5,7 +5,7 @@ import hexlet.code.Engine;
 import static hexlet.code.Engine.COUNT_ROUNDS;
 
 public class Calc {
-    private static String RULES_GAME = "What is the result of the expression?";
+    private static final String RULES_GAME = "What is the result of the expression?";
     private static final int MIN_NUMBER = 1;
     private static final int MAX_NUMBER = 100;
     private static final String[] OPERATORS = {" + ", " - ", " * "};
