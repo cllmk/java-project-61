@@ -10,8 +10,10 @@ public class Progression {
     private static final String RULES_GAME = "What number is missing in the progression?";
     private static final int MIN_NUMBER = 1;
     private static final int MAX_NUMBER = 100;
-    private static final int MIN_LENGTH_PROGRESSION= 5;
+    private static final int MIN_LENGTH_PROGRESSION = 5;
     private static final int MAX_LENGTH_PROGRESSION = 10;
+    public static final int MIN_STEP_PROGRESSION = 1;
+    public static final int MAX_STEP_PROGRESSION = 5;
     private static String[][] generateExpressionsAndRightAnswers() {
         String[][] expressionsAndAnswer = new String[COUNT_ROUNDS][2];
         for (int i = 0; i < COUNT_ROUNDS; i++) {
@@ -20,7 +22,7 @@ public class Progression {
             String hiddenElement = null;
             String[] progression = new String[lengthProgression];
             int preElementOfProgression = Engine.getRandomNumber(MIN_NUMBER, MAX_NUMBER);
-            int stepProgression = Engine.getRandomNumber(1, 5);
+            int stepProgression = Engine.getRandomNumber(MIN_STEP_PROGRESSION, MAX_STEP_PROGRESSION);
             for (int j = 0; j < lengthProgression; j++) {
                 progression[j] = String.valueOf(preElementOfProgression + stepProgression);
                 preElementOfProgression = preElementOfProgression + stepProgression;
