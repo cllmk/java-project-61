@@ -11,3 +11,12 @@ This console application is implemented on the Java SE version 20 platform.
 
 ## Asciinema for game: Calc
 [![asciicast](https://asciinema.org/a/SP1lpXP3GD7DvhYIwpDisN8bb.svg)](https://asciinema.org/a/SP1lpXP3GD7DvhYIwpDisN8bb)
+
+## Asciinema for game: GCD
+[![asciicast](https://asciinema.org/a/J7XbQSXcLri9fTWz6G16Aa8jV.svg)](https://asciinema.org/a/J7XbQSXcLri9fTWz6G16Aa8jV)
+
+## Asciinema for game: Progression
+[![asciicast](https://asciinema.org/a/N48nlBIQ8cTGgyolpENbGGXJa.svg)](https://asciinema.org/a/N48nlBIQ8cTGgyolpENbGGXJa)
+
+## Asciinema for game: Prime
+[![asciicast](https://asciinema.org/a/T70rWQc6vVfYf8iPWkJwNcrF1.svg)](https://asciinema.org/a/T70rWQc6vVfYf8iPWkJwNcrF1)
