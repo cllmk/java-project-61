@@ -23,8 +23,8 @@ public class GCD {
                 tempMod = maxDiv % minDiv;
                 maxDiv = minDiv;
                 minDiv = tempMod;
-                expressionsAndAnswer[i][1] = minDiv + "";
-            } while (maxDiv % minDiv != 0);
+                expressionsAndAnswer[i][1] = maxDiv + "";
+            } while (minDiv != 0);
         }
         return expressionsAndAnswer;
     }
