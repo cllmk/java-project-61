@@ -23,7 +23,9 @@ public class Engine {
                 boolean isRightAnswer = rightAnswer.equals(playerAnswer);
                 if (isRightAnswer) {
                     System.out.println("Correct!");
-
+                    if (i == 2) {
+                        System.out.println("Congratulations, " + userName + "!");
+                    }
                 } else {
                     System.out.printf("'%s' is wrong answer ;(. Correct answer was '%s'%n", playerAnswer, rightAnswer);
                     System.out.println("Let's try again, " + userName + "!");
@@ -35,10 +37,4 @@ public class Engine {
         Random random = new Random();
         return random.nextInt(max - min) + min;
     }
-//    private static int MIN_RANDOM;
-//    private static int MAX_RANDOM;
-//    public static void setMinMaxRandom(int min, int max) {
-//        MIN_RANDOM = min;
-//        MAX_RANDOM = max;
-//    }
 }
