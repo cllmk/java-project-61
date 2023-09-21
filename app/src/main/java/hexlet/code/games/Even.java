@@ -22,4 +22,3 @@ public class Even {
         Engine.runGame(RULES_GAME, rightAnswers);
     }
 }
-
