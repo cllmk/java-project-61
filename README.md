@@ -8,3 +8,6 @@ This console application is implemented on the Java SE version 20 platform.
 
 ## Asciinema for game: Even
 [![asciicast](https://asciinema.org/a/EVi9iXfyrXjY0b82UnMngolmh.svg)](https://asciinema.org/a/EVi9iXfyrXjY0b82UnMngolmh)
+
+## Asciinema for game: Calc
+[![asciicast](https://asciinema.org/a/SP1lpXP3GD7DvhYIwpDisN8bb.svg)](https://asciinema.org/a/SP1lpXP3GD7DvhYIwpDisN8bb)
