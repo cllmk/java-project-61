@@ -15,6 +15,7 @@ public class App {
     private static final int PROGRESSION_GAME = 5;
     private static final int PRIME_GAME = 6;
     private static final int EXIT = 0;
+
     public static void main(String[] args) {
         System.out.println("Please enter the game number and press Enter.");
         System.out.println("1 - Greet");

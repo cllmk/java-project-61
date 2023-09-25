@@ -1,6 +1,8 @@
 package hexlet.code.games;
 
 import hexlet.code.Engine;
+import hexlet.code.Utils;
+
 import static hexlet.code.Engine.COUNT_ROUNDS;
 
 public class Even {
@@ -10,7 +12,7 @@ public class Even {
     private static String[][] generateExpressionsAndRightAnswers() {
         String[][] expressionsAndAnswer = new String[COUNT_ROUNDS][2];
         for (int i = 0; i < COUNT_ROUNDS; i++) {
-            int number = Engine.getRandomNumber(MIN_NUMBER, MAX_NUMBER);
+            int number = Utils.getRandomNumber(MIN_NUMBER, MAX_NUMBER);
             String answer = number % 2 == 0 ? "yes" : "no";
             expressionsAndAnswer[i][0] = String.valueOf(number);
             expressionsAndAnswer[i][1] = answer;

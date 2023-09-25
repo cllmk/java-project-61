@@ -4,8 +4,11 @@ import java.util.Random;
 import java.util.Scanner;
 
 public class Engine {
+
     private static String userName;
+
     public static final int COUNT_ROUNDS = 3;
+
     public static void runGame(String rulesGame, String[][] questionExpression) {
         System.out.println("Welcome to the Brain Games!");
         System.out.print("May I have your name? ");
@@ -31,9 +34,5 @@ public class Engine {
                     break;
                 }
         }
-    }
-    public static int getRandomNumber(int min, int max) {
-        Random random = new Random();
-        return random.nextInt(max - min) + min;
     }
 }
