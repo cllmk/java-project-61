@@ -22,10 +22,10 @@ public class Progression {
         for (int i = 0; i < COUNT_ROUNDS; i++) {
             int lengthProgression = Utils.getRandomNumber(MIN_LENGTH_PROGRESSION, MAX_LENGTH_PROGRESSION);
             int stepProgression = Utils.getRandomNumber(MIN_STEP_PROGRESSION, MAX_STEP_PROGRESSION);
-            int preElementOfProgression = Utils.getRandomNumber(MIN_NUMBER, MAX_NUMBER);
-            String[][] progressionAndHiddenElement = generateProgression(preElementOfProgression, stepProgression, lengthProgression);
-            String[] progression = progressionAndHiddenElement[0];
-            String hiddenElement = progressionAndHiddenElement[1][0];
+            int firstElement = Utils.getRandomNumber(MIN_NUMBER, MAX_NUMBER);
+            String[][] answerAndHiddenElement = generateProgression(firstElement, stepProgression, lengthProgression);
+            String[] progression = answerAndHiddenElement[0];
+            String hiddenElement = answerAndHiddenElement[1][0];
             expressionsAndAnswer[i][0] = Arrays.toString(progression).replaceAll(",|\\[|]", "");
             expressionsAndAnswer[i][1] = hiddenElement;
         }
@@ -37,12 +37,12 @@ public class Progression {
         Engine.runGame(RULES_GAME, rightAnswers);
     }
 
-    public static String[][] generateProgression(int firstNumberOfProgression, int stepProgression, int sizeOfProgression){
+    public static String[][] generateProgression(int firstNumber, int stepProgression, int sizeOfProgression) {
         String[][] progression = new String[2][sizeOfProgression];
         int indexOfHiddenElement = Utils.getRandomNumber(0, sizeOfProgression - 1);
         for (int j = 0; j < sizeOfProgression; j++) {
-            progression[0][j] = String.valueOf(firstNumberOfProgression + stepProgression);
-            firstNumberOfProgression = firstNumberOfProgression + stepProgression;
+            progression[0][j] = String.valueOf(firstNumber + stepProgression);
+            firstNumber = firstNumber + stepProgression;
             if (j == indexOfHiddenElement) {
                 progression[1][0] = progression[0][j];   // add hiddenElement to [1][0] for processing in the Engine
                 progression[0][j] = "..";
