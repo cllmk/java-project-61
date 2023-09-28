@@ -17,19 +17,7 @@ public class GCD {
             int number1 = Utils.getRandomNumber(MIN_NUMBER, MAX_NUMBER);
             int number2 = Utils.getRandomNumber(MIN_NUMBER, MAX_NUMBER);
             expressionsAndAnswer[i][0] = number1 + " " + number2;
-            int tempMod;
-            int maxDiv = Math.max(number1, number2);
-            int minDiv = Math.min(number1, number2);
-            if (minDiv == 0) {
-                expressionsAndAnswer[i][1] = minDiv + "";
-            } else {
-                do {
-                    tempMod = maxDiv % minDiv;
-                    maxDiv = minDiv;
-                    minDiv = tempMod;
-                    expressionsAndAnswer[i][1] = maxDiv + "";
-                } while (minDiv != 0);
-            }
+            expressionsAndAnswer[i][1] = getGCD(number1, number2) + "";
         }
         return expressionsAndAnswer;
     }
@@ -37,5 +25,21 @@ public class GCD {
     public static void runGame() {
         String[][] rightAnswers = generateExpressionsAndRightAnswers();
         Engine.runGame(RULES_GAME, rightAnswers);
+    }
+
+    public static int getGCD(int firstNumber, int secondNumber) {
+        int tempMod;
+        int maxDiv = Math.max(firstNumber, secondNumber);
+        int minDiv = Math.min(firstNumber, secondNumber);
+        if (minDiv == 0) {
+            return minDiv;
+        } else {
+            do {
+                tempMod = maxDiv % minDiv;
+                maxDiv = minDiv;
+                minDiv = tempMod;
+            } while (minDiv != 0);
+        }
+        return maxDiv;
     }
 }
