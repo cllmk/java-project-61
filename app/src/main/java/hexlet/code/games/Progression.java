@@ -45,7 +45,7 @@ public class Progression {
         for (int j = 0; j < sizeOfProgression; j++) {
             progression[j] = firstNumber + stepProgression;
             firstNumber = firstNumber + stepProgression;
-            }
-        return progression;
         }
+        return progression;
+    }
 }

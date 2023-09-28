@@ -1,4 +1,5 @@
 package hexlet.code;
+
 import hexlet.code.games.Even;
 import hexlet.code.games.Prime;
 import hexlet.code.games.Calc;
@@ -8,7 +9,7 @@ import hexlet.code.games.Progression;
 import java.util.Scanner;
 
 public class App {
-    private static final int GREET_USER  = 1;
+    private static final int GREET_USER = 1;
     private static final int EVEN_GAME = 2;
     private static final int CALC_GAME = 3;
     private static final int GCD_GAME = 4;
@@ -49,7 +50,8 @@ public class App {
                 break;
             case EXIT:
                 break;
-            default: System.out.println("Operation selection error.");
+            default:
+                System.out.println("Operation selection error.");
         }
     }
 }

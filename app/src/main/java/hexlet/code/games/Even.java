@@ -15,7 +15,8 @@ public class Even {
         for (int i = 0; i < COUNT_ROUNDS; i++) {
             int number = Utils.getRandomNumber(MIN_NUMBER, MAX_NUMBER);
             expressionsAndAnswer[i][0] = String.valueOf(number);
-            expressionsAndAnswer[i][1] = isEven(number) ? "yes" : "no";;
+            expressionsAndAnswer[i][1] = isEven(number) ? "yes" : "no";
+            ;
         }
         return expressionsAndAnswer;
     }
