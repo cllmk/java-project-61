@@ -23,11 +23,14 @@ public class Progression {
             int lengthProgression = Utils.getRandomNumber(MIN_LENGTH_PROGRESSION, MAX_LENGTH_PROGRESSION);
             int stepProgression = Utils.getRandomNumber(MIN_STEP_PROGRESSION, MAX_STEP_PROGRESSION);
             int firstElement = Utils.getRandomNumber(MIN_NUMBER, MAX_NUMBER);
-            String[][] answerAndHiddenElement = generateProgression(firstElement, stepProgression, lengthProgression);
-            String[] progression = answerAndHiddenElement[0];
-            String hiddenElement = answerAndHiddenElement[1][0];
-            expressionsAndAnswer[i][0] = Arrays.toString(progression).replaceAll(",|\\[|]", "");
-            expressionsAndAnswer[i][1] = hiddenElement;
+            int[] progression = generateProgression(firstElement, stepProgression, lengthProgression);
+            int sizeProgression = progression.length;
+            int indexOfHiddenElement = Utils.getRandomNumber(0, sizeProgression - 1);
+            int[] onePartOfProgression = Arrays.copyOfRange(progression, 0, indexOfHiddenElement);
+            int[] twoPartOfProgression = Arrays.copyOfRange(progression, indexOfHiddenElement + 1, sizeProgression - 1);
+            String answer = Arrays.toString(onePartOfProgression) + " .. " + Arrays.toString(twoPartOfProgression);
+            expressionsAndAnswer[i][0] = answer.replaceAll(",|\\[|]", "");
+            expressionsAndAnswer[i][1] = Integer.toString(progression[indexOfHiddenElement]);
         }
         return expressionsAndAnswer;
     }
@@ -37,17 +40,12 @@ public class Progression {
         Engine.runGame(RULES_GAME, rightAnswers);
     }
 
-    public static String[][] generateProgression(int firstNumber, int stepProgression, int sizeOfProgression) {
-        String[][] progression = new String[2][sizeOfProgression];
-        int indexOfHiddenElement = Utils.getRandomNumber(0, sizeOfProgression - 1);
+    public static int[] generateProgression(int firstNumber, int stepProgression, int sizeOfProgression) {
+        int[] progression = new int[sizeOfProgression];
         for (int j = 0; j < sizeOfProgression; j++) {
-            progression[0][j] = String.valueOf(firstNumber + stepProgression);
+            progression[j] = firstNumber + stepProgression;
             firstNumber = firstNumber + stepProgression;
-            if (j == indexOfHiddenElement) {
-                progression[1][0] = progression[0][j];   // add hiddenElement to [1][0] for processing in the Engine
-                progression[0][j] = "..";
             }
-        }
         return progression;
-    }
+        }
 }
