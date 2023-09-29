@@ -27,7 +27,7 @@ public class Progression {
             int sizeProgression = progression.length;
             int indexOfHiddenElement = Utils.getRandomNumber(0, sizeProgression - 1);
             int[] onePartOfProgression = Arrays.copyOfRange(progression, 0, indexOfHiddenElement);
-            int[] twoPartOfProgression = Arrays.copyOfRange(progression, indexOfHiddenElement + 1, sizeProgression - 1);
+            int[] twoPartOfProgression = Arrays.copyOfRange(progression, indexOfHiddenElement + 1, sizeProgression);
             String answer = Arrays.toString(onePartOfProgression) + " .. " + Arrays.toString(twoPartOfProgression);
             expressionsAndAnswer[i][0] = answer.replaceAll(",|\\[|]", "");
             expressionsAndAnswer[i][1] = Integer.toString(progression[indexOfHiddenElement]);
