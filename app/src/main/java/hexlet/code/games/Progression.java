@@ -3,8 +3,6 @@ package hexlet.code.games;
 import hexlet.code.Engine;
 import hexlet.code.Utils;
 
-import java.util.Arrays;
-
 import static hexlet.code.Engine.COUNT_ROUNDS;
 
 public class Progression {
