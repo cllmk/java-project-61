@@ -26,10 +26,15 @@ public class Progression {
             int[] progression = generateProgression(firstElement, stepProgression, lengthProgression);
             int sizeProgression = progression.length;
             int indexOfHiddenElement = Utils.getRandomNumber(0, sizeProgression - 1);
-            int[] onePartOfProgression = Arrays.copyOfRange(progression, 0, indexOfHiddenElement);
-            int[] twoPartOfProgression = Arrays.copyOfRange(progression, indexOfHiddenElement + 1, sizeProgression);
-            String answer = Arrays.toString(onePartOfProgression) + " .. " + Arrays.toString(twoPartOfProgression);
-            expressionsAndAnswer[i][0] = answer.replaceAll(",|\\[|]", "");
+            String answer = "";
+            for (int j = 0; j < progression.length; j++) {
+                if (indexOfHiddenElement == j) {
+                    answer = answer.concat(".. ");
+                    j++;
+                }
+                answer = answer.concat(String.valueOf(progression[j]) + " ");
+            }
+            expressionsAndAnswer[i][0] = answer.replaceFirst(".$", "");
             expressionsAndAnswer[i][1] = Integer.toString(progression[indexOfHiddenElement]);
         }
         return expressionsAndAnswer;
